@@ -32,7 +32,9 @@ function App() {
           vista={pelicula.vista}
         />
       ))}
-      <Acordeon titulo="Título de prueba" contenido="Contenido blablabla..." />
+      <Acordeon 
+      titulo="Pelicula fav" 
+      contenido="El viaje de Chihiro" />
       <Buscador/>
       <ListaCompras/>
     </>
