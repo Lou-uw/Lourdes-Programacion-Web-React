@@ -45,7 +45,9 @@ export default function ListaCompras() {
               checked={item.comprado}
               onChange={() => toggleComprado(item.id)}
             />
-            <span>{item.texto}</span>
+             <span style={{ textDecoration: item.comprado ? "line-through" : "none" }}>
+                {item.texto}
+             </span>
             <button onClick={() => eliminarItem(item.id)}>✕</button>
           </li>
         ))}

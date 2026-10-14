@@ -1,12 +1,11 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
+
 import "./App.css";
 import TarjetaPelicula from "./components/TarjetaPelicula";
 import Perfil from "./components/Perfil";
 import Acordeon from "./components/Acordeon";
 import Buscador from "./components/Buscador";
 import ListaCompras from "./components/ListaCompras";
+import Contador from "./components/Contador";
 
 const peliculas = [
   { id: 1, titulo: "Interstellar", año: 2014, vista: false },
@@ -15,21 +14,10 @@ const peliculas = [
   { id: 4, titulo: "Oppenheimer", año: 2023, vista: true },
 ];
 
-function App() {
-  const [cuenta, setCuenta] = useState(0);
-
+function App() {    
   return (
     <>
-      <h2>Contador:</h2>
-      <div>
-        <p>{cuenta}</p>
-        <button onClick={() => setCuenta(cuenta + 1)}>Sumar</button>
-        <button onClick={() => { if (cuenta > 0) setCuenta(cuenta - 1); }}>
-        Restar
-        </button>
-        <button onClick={() => setCuenta((0))}>Reiniciar</button>
-      </div>
-
+     <Contador />
       <Perfil
         nombre="Lourdes"
         rol="Estudiante"

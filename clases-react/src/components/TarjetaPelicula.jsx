@@ -10,7 +10,7 @@ export default function TarjetaPelicula({titulo, año, vista}){
     <>
       <h1>
         {titulo}
-        {vista ? "✓" : "nada"}
+        {vista ? "✓" : ""}
       </h1>
       <p>{año}</p>
       <p>{vista}</p>
