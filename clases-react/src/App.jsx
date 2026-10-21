@@ -1,11 +1,12 @@
-
-import "./App.css";
-import TarjetaPelicula from "./components/TarjetaPelicula";
-import Perfil from "./components/Perfil";
 import Acordeon from "./components/Acordeon";
 import Buscador from "./components/Buscador";
 import ListaCompras from "./components/ListaCompras";
 import Contador from "./components/Contador";
+import "./App.css";
+import TarjetaPelicula from "./components/TarjetaPelicula";
+import Perfil from "./components/Perfil";
+import Reloj from "./components/Reloj";
+import { useState } from "react";
 
 const peliculas = [
   { id: 1, titulo: "Interstellar", año: 2014, vista: false },
@@ -14,9 +15,16 @@ const peliculas = [
   { id: 4, titulo: "Oppenheimer", año: 2023, vista: true },
 ];
 
-function App() {    
+function App() {   
+  const [mostrarReloj, setMostrarReloj] = useState(true); 
   return (
     <>
+    <div>
+        <button onClick={() => setMostrarReloj(!mostrarReloj)}>
+          {mostrarReloj ? "Esconder Reloj" : "Mostrar Reloj"}
+        </button>
+        {mostrarReloj && <Reloj />}
+      </div>
      <Contador />
       <Perfil
         nombre="Lourdes"
@@ -32,9 +40,8 @@ function App() {
           vista={pelicula.vista}
         />
       ))}
-      <Acordeon 
-      titulo="Pelicula fav" 
-      contenido="El viaje de Chihiro" />
+    
+      <Acordeon titulo="Título de prueba" contenido="Contenido blablabla..." />
       <Buscador/>
       <ListaCompras/>
     </>
