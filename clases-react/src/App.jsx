@@ -6,6 +6,8 @@ import "./App.css";
 import TarjetaPelicula from "./components/TarjetaPelicula";
 import Perfil from "./components/Perfil";
 import Reloj from "./components/Reloj";
+import ClicksYRenders from "./components/ClicksYRenders";
+import Ficha from "./components/Ficha";
 import { useState } from "react";
 
 const peliculas = [
@@ -44,6 +46,17 @@ function App() {
       <Acordeon titulo="Título de prueba" contenido="Contenido blablabla..." />
       <Buscador/>
       <ListaCompras/>
+       <div>
+      <h2>Clase 11 - Ejercicio 2</h2>
+      <ClicksYRenders />
+
+      <h2>Clase 11 - Ejercicio 3</h2>
+      <Ficha nombre="Sam" rol="Diseñador" />
+      <Ficha nombre="Alba" rol="Programadora" />
+      <h3>Clase 11 - Ejercicio 4</h3>
+      <ContadorDeVisitas />
+      <ContadorDeCafes />
+    </div>
     </>
   );
 }
